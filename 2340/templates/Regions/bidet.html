@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bidet</title>
+</head>
+<body>
+<p><b>Bidet</b></p>
+<p>{{xcoord}}</p>
+<p>{{ycoord}}</p>
+<p>{{techlevel}}</p>
+<p><b>Bidet Market</b></p>
+<table border = 2>
+    <tr>
+        <th><b>Item</b></th>
+        <td><b>Buying Price</b></td>
+     </tr>
+         {% for itemmarket, pricebuyvalue in market.items() %}
+            <tr>
+               <th><a href="{{ url_for('buy', item_market=itemmarket, price_buy_value=pricebuyvalue) }}"><input type="button" value= "{{ itemmarket }}"></a></th>
+               <td> {{ pricebuyvalue }} </td>
+            </tr>
+         {% endfor %}
+         <tr>
+      </table>
+{% if special_item_key == 1 %}
+<p><b> You have found the {{name}}'s Universe</b></p>
+<p><a href="{{ url_for('special')}}"><button type="button">Buy<p>Cost: 100</p></button></a></body></p>
+{% endif %}
+<p><b>Karma</b></p>
+<p>{{karma}}</p>
+<p><b>Your Inventory:</b></p>
+<table border = 2>
+    <tr>
+        <th><b>Item</b></th>
+        <td><b>Selling Price</b></td>
+     </tr>
+         {% for iteminventory, pricesellvalue in inventory.items() %}
+            <tr>
+               <th><a href="{{ url_for('sell', item_inventory=iteminventory, price_sell_value=pricesellvalue) }}"><input type="button" value= "{{ iteminventory }}"></a></th>
+               <td> {{ pricesellvalue }} </td>
+            </tr>
+         {% endfor %}
+         <tr>
+      </table>
+<p><b>Total Remaining Credit:</b></p>
+<p>{{credits}}</p>
+<p><b>Ship Health:</b></p>
+<p>{{shealth}}</p>
+<p><b>Cargo Space:</b></p>
+<p>{{ cargo_space }}</p>
+<p><b>Total Fuel Cost:</b></p>
+<p>{{total_fc}}</p>
+<p><a href="{{ url_for('refuel')}}"><button type="button">Refuel<p>100</p></button></a></p>
+<p><a href="{{ url_for('repair')}}"><button type="button">Repair<p>{{cRepair}}</p></button></a></body></p>
+<a href="{{ url_for('ard', fc_sub = fuelcost[0]) }}"><button type="button">Travel to Ard<p>Fuel Cost: {{fuelcost[0]}}</p></button></a></body>
+<a href="{{ url_for('blue_light', fc_sub = fuelcost[1]) }}"><button type="button">Travel to Blue Light<p>Fuel Cost: {{fuelcost[1]}}</button></a></body>
+<a href="{{ url_for('braces', fc_sub = fuelcost[2]) }}"><button type="button">Travel to Braces<p>Fuel Cost: {{fuelcost[2]}}</button></a></body>
+<a href="{{ url_for('cookout', fc_sub = fuelcost[3]) }}"><button type="button">Travel to Cookout<p>Fuel Cost: {{fuelcost[3]}}</button></a></body>
+<a href="{{ url_for('emory', fc_sub = fuelcost[4]) }}"><button type="button">Travel to Emory<p>Fuel Cost: {{fuelcost[4]}}</button></a></body>
+<a href="{{ url_for('florida_man', fc_sub = fuelcost[5]) }}"><button type="button">Travel to Florida Man<p>Fuel Cost: {{fuelcost[5]}}</button></a></body>
+<a href="{{ url_for('gorilla', fc_sub = fuelcost[6]) }}"><button type="button">Travel to Gorilla<p>Fuel Cost: {{fuelcost[6]}}</button></a></body>
+<a href="{{ url_for('north_avenue_east', fc_sub = fuelcost[7]) }}"><button type="button">Travel to North Avenue East<p>Fuel Cost: {{fuelcost[7]}}</button></a></body>
+<a href="{{ url_for('shreyu', fc_sub = fuelcost[8]) }}"><button type="button">Travel to Shreyu<p>Fuel Cost: {{fuelcost[8]}}</button></a></body>
+</body>
+</html>

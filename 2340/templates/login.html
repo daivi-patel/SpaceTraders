@@ -1,0 +1,129 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Login</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p>Enter Character Name: <input name = "variable"> </p>-->
+<!--<p>-->
+<!--    <label>Select Difficulty:</label>-->
+<!--    <select id = "levels">-->
+<!--        <option value = "16">Easy</option>-->
+<!--        <option value = "12">Medium</option>-->
+<!--        <option value = "8">Hard</option>-->
+<!--    </select>-->
+<!--</p>-->
+<!--<p>Allocate skill points:</p>-->
+<!--<p>Pilot: <input>Fighter: <input>Merchant: <input>Engineer: <input></p>-->
+<!--<p>-->
+<!--    <a href="/display"><button>Submit</button></a>-->
+<!--</p>-->
+<!--</body>-->
+<!--</html>-->
+<html>
+   <body>
+      <form action = "http://localhost:5000/result" method = "POST">
+          <p><b>Name: </b><input type = "text" name = "Name" /></p>
+          <p> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </p>
+          <p> <b> Total skill points allowed by difficulty:</b> </p>
+          <p> Easy: 16 </p>
+          <p> Medium: 12 </p>
+          <p> Hard: 8 </p>
+          <p> <b> Select difficulty: </b> </p>
+          <select name = "Difficulty", id = "Difficulty">
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+          </select>
+          <p> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </p>
+          <p> <b> Please select skill level: </b> </p>
+          Engineer:
+          <select name = "Engineer", id = "Engineer">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+          </select>
+          <p>
+          Pilot:
+          <select name = "Pilot", id = "Pilot">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+          </select>
+          </p>
+          <p>
+          Fighter:
+          <select name = "Fighter", id = "Fighter">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+          </select>
+          </p>
+          <p>
+          Merchant:
+          <select name = "Merchant", id = "Merchant">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+          </select>
+          </p>
+          <p><input type = "Submit" value = "Submit" /></p>
+   </body>
+</html>

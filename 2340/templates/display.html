@@ -1,0 +1,51 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Display</title>-->
+<!--</head>-->
+<!--<p>-->
+<!--<p> Name:  <var> name </var> </p>-->
+<!--<p>Difficult: <var> dif</var></p>-->
+
+<!--</body>-->
+<!--</html>-->
+<!doctype html>
+<html>
+   <body>
+   <b>Player</b>
+      <table border = 2>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+         <tr>
+            <th>Starting Skill Points</th>
+            <td>{{ startingCredits }}</td>
+         </tr>
+         <tr>
+      </table>
+      <b>Ship</b>
+      <table border = 2>
+            <th> Name </th>
+            <td> {{ ship }} </td>
+         </tr>
+         <tr>
+            <th> Starting Fuel Capacity </th>
+            <td> {{ starting_fc }} </td>
+         </tr>
+         <tr>
+            <th> Starting Cargo Space </th>
+            <td> {{ starting_cs }} </td>
+         </tr>
+         <tr>
+            <th> Ship Health </th>
+            <td> {{ starting_h }} </td>
+         </tr>
+      </table>
+   <a href="{{ url_for('bidet', fc_sub = 0) }}"><button>Ok</button></a>
+
+   </body>
+</html>

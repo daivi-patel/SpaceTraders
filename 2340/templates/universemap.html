@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Universe Map</title>
+</head>
+<body>
+    {% for element in universelist[1:universelist.length] %}
+      <a href="{{element[0][8:]}}"><button><p>{{ element[0]}}</p>
+          <p>{{ element[1]}}</p>
+          <p>{{ element[2]}}</p>
+          <p>{{ element[3]}}</p></button></a>
+
+
+    {% endfor %}
+</body>
+</html>
